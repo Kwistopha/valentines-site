@@ -12,14 +12,18 @@ noBtn.addEventListener("click", shrinkButton);
 
 function shrinkButton() {
   const style = window.getComputedStyle(noBtn);
+
+  
   const width = parseFloat(style.width);
   const height = parseFloat(style.height);
-
-
   const newWidth = width * 0.9;
   const newHeight = height * 0.9;
-
   noBtn.style.width = newWidth + "px";
   noBtn.style.height = newHeight + "px";
+
+
+  const fontSize = parseFloat(style.fontSize);
+  const newFontSize = fontSize * 0.9;
+  noBtn.style.fontSize = newFontSize + "px";
 }
 
